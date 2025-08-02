@@ -1,14 +1,10 @@
 import { Layout } from "../components/Layout"
 
-const Home = () => {
+const Dashboard = () => {
   return (
     <Layout>
-      <>
-        <h1> Bienvenidos!</h1>
-
-      </>
+      <h4>Mi dashboard</h4>
     </Layout>
   )
 }
-
-export { Home }
+export { Dashboard }
