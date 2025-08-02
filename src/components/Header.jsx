@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import { useAuth } from "../context/UserContext"
 
 const Header = () => {
+
   const { user, logout } = useAuth()
 
   const handleLogout = () => {
@@ -12,8 +13,8 @@ const Header = () => {
     <>
       <header>
         <nav>
-          <ul>
 
+          <ul>
             {
               user && <>
                 <li><Link to="/">Inicio</Link></li>
