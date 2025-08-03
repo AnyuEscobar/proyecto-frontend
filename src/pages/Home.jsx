@@ -152,14 +152,14 @@ const Home = () => {
           </section>
         }
 
-        <div>
+        <div id="products-grid">
           {
-            products.map((product) => <div key={product.id}>
-              <h2 key={product.id}>{product.title}</h2>
-              <img width="80px" src={product.image} alt={`Imagen de ${product.title}`} />
-              <p>${product.price}</p>
-              <p>{product.description}</p>
-              <p><strong>{product.category}</strong></p>
+            products.map((product) => <div className="products" key={product.id}>
+              <h2 className="p-title" key={product.id}>{product.title}</h2>
+              <img className="product-img" width="80px" src={product.image} alt={`Imagen de ${product.title}`} />
+              <p className="p-price">${product.price}</p>
+              <p className="p-description">{product.description}</p>
+              <p className="p-category"><strong>{product.category}</strong></p>
               {
                 user && <div>
                   <button onClick={() => handleOpenEdit(product)}>Actualizar</button>
