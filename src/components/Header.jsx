@@ -11,9 +11,8 @@ const Header = () => {
 
   return (
     <>
-      <header>
+      <header id="header-nav">
         <nav>
-
           <ul>
             {
               user && <>

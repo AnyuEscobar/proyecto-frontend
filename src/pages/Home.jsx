@@ -12,42 +12,23 @@ const Home = () => {
   const [categoryEdit, setCategoryEdit] = useState("")
   const [imageEdit, setImageEdit] = useState("")
   //creo los estados para buscar los productos a medida que voy escribiendo en el buscador
-  const [search, setSearch] = useState('');
-  const [results, setResults] = useState([])
+  // const [search, setSearch] = useState('');
+  // const [results, setResults] = useState([])
 
 
-
-  const handleChange = async (e) => {
-    const valor = e.target.value;
-    setSearch(valor);
-
-    if (valor.trim() === '') {
-      // Limpia resultados si el input está vacío
-      setResults([]);
-      return;
-    }
-    try {
-      const response = await fetch(`https://fakestoreapi.com/products`)
-      const data = await response.json();
-
-      // Hago un filtro 
-      const filtrados = data.filter(product =>
-        product.title.toLowerCase().includes(valor.toLowerCase())
-      );
-      setResults(filtrados);
-    } catch (error) {
-      console.error('Error searching products:', error);
-    }
-  };
 
 
   // simulando existencia del usuario, proximamente este estado será global
   const { user } = useAuth()
 
-  const fetchingProducts = async (id) => {
-    const response = (`https://fakestoreapi.com/products/${id}`, { method: "DELETE" })
-    const data = await response.json()
-    setProducts(data)
+  const fetchingProducts = async () => {
+    try {
+      const response = await fetch("https://fakestoreapi.com/products")
+      const data = await response.json()
+      setProducts(data)
+    } catch (error) {
+      console.error("Error al cargar productos:", error)
+    }
   }
 
   // El array vacío (dependencias) espera a que ejecute el return del jsx. Si tiene algo, useEffect se va a ejecutar cada vez que se modifique lo que este dentro de la dependencia.
@@ -112,6 +93,29 @@ const Home = () => {
     }
   }
 
+  // //mi funcion de handleChange
+  // const handleChange = async (e) => {
+  //   const valor = e.target.value;
+  //   setSearch(valor);
+
+  //   if (valor.trim() === '') {
+  //     // Limpia resultados si el input está vacío
+  //     setResults([]);
+  //     return;
+  //   }
+
+  //   const response = await fetch(`https://fakestoreapi.com/products`)
+  //   const data = await response.json();
+
+  //   // hago un filtro
+  //   const filtrados = data.filter(product =>
+  //     product.title.toLowerCase().includes(valor.toLowerCase())
+  //   );
+  //   setResults(filtrados);
+
+  // };
+
+
   return (
     <Layout>
       <section>
@@ -143,12 +147,12 @@ const Home = () => {
 
 
         {/* Acá creo el input que voy a usar como buscador, con un onChange */}
-        <input type="text" placeholder="Buscar..." onChange={(e) => handleChange(e)} />
-        <ul>
-          <div id="search-results">
+        {/* <input type="text" placeholder="Buscar..." onChange={(e) => handleChange(e)} /> */}
+        {/* <ul> */}
+        {/* <div id="search-results"> */}
 
-            {/* Uso el .map con todas las categorias para que aparezcan cuando las vaya filtrando */}
-            {
+        {/* Uso el .map con todas las categorias para que aparezcan cuando las vaya filtrando */}
+        {/* {
               results.map((product) => (
                 <div className="products" key={product.id}>
                   <h2 className="p-title">{product.title}</h2>
@@ -156,12 +160,12 @@ const Home = () => {
                   <p className="p-price">${product.price}</p>
                   <p className="p-description">{product.description}</p>
                   <p className="p-category"><strong>{product.category}</strong></p>
-                </div>
-              ))
+                </div> */}
+        {/* ))
             }
           </div>
 
-        </ul>
+        </ul> */}
 
 
 

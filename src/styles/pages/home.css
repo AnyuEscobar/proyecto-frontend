@@ -1,3 +1,9 @@
+/* Estilos globales */
+
+body {
+  background-color: #F5F5F5;
+}
+
 /* grid de productos*/
 #products-grid {
 

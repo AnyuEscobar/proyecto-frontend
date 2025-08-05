@@ -1,0 +1,50 @@
+/* Header base */
+#header-nav {
+  background-color: rgb(86, 105, 147);
+  padding: 1rem 2rem;
+  color: white;
+  font-family: "Faculty Glyphic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Navbar */
+#header-nav nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Links comunes */
+#header-nav nav ul li a {
+  color: rgb(3, 3, 3);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* efecto hover */
+#header-nav nav ul li a:hover {
+  color: #e1b5a1;
+
+}
+
+/* Botón de logout */
+#header-nav nav ul button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+
+}
+
+#header-nav nav ul button:hover {
+  background-color: #d32f2f;
+}
