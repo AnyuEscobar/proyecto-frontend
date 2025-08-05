@@ -11,12 +11,41 @@ const Home = () => {
   const [descriptionEdit, setDescriptionEdit] = useState("")
   const [categoryEdit, setCategoryEdit] = useState("")
   const [imageEdit, setImageEdit] = useState("")
+  //creo los estados para buscar los productos a medida que voy escribiendo en el buscador
+  const [search, setSearch] = useState('');
+  const [results, setResults] = useState([])
+
+
+
+  const handleChange = async (e) => {
+    const valor = e.target.value;
+    setSearch(valor);
+
+    if (valor.trim() === '') {
+      // Limpia resultados si el input está vacío
+      setResults([]);
+      return;
+    }
+    try {
+      const response = await fetch(`https://fakestoreapi.com/products`)
+      const data = await response.json();
+
+      // Hago un filtro 
+      const filtrados = data.filter(product =>
+        product.title.toLowerCase().includes(valor.toLowerCase())
+      );
+      setResults(filtrados);
+    } catch (error) {
+      console.error('Error searching products:', error);
+    }
+  };
+
 
   // simulando existencia del usuario, proximamente este estado será global
   const { user } = useAuth()
 
-  const fetchingProducts = async () => {
-    const response = await fetch("https://fakestoreapi.com/products", { method: "GET" })
+  const fetchingProducts = async (id) => {
+    const response = (`https://fakestoreapi.com/products/${id}`, { method: "DELETE" })
     const data = await response.json()
     setProducts(data)
   }
@@ -113,6 +142,29 @@ const Home = () => {
         <p>Elegí entre nuestras categorías más populares.</p>
 
 
+        {/* Acá creo el input que voy a usar como buscador, con un onChange */}
+        <input type="text" placeholder="Buscar..." onChange={(e) => handleChange(e)} />
+        <ul>
+          <div id="search-results">
+
+            {/* Uso el .map con todas las categorias para que aparezcan cuando las vaya filtrando */}
+            {
+              results.map((product) => (
+                <div className="products" key={product.id}>
+                  <h2 className="p-title">{product.title}</h2>
+                  <img className="product-img" width="80px" src={product.image} alt={`Imagen de ${product.title}`} />
+                  <p className="p-price">${product.price}</p>
+                  <p className="p-description">{product.description}</p>
+                  <p className="p-category"><strong>{product.category}</strong></p>
+                </div>
+              ))
+            }
+          </div>
+
+        </ul>
+
+
+
         {
           showPopup && <section className="popup-edit">
             <h2>Editando producto.</h2>
@@ -170,6 +222,7 @@ const Home = () => {
           }
         </div>
       </section>
+
     </Layout>
   )
 }
