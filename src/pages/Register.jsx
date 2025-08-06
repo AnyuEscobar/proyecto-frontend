@@ -37,34 +37,34 @@ const Register = () => {
     <Layout>
       <h1>Registrate</h1>
 
-      <section>
+      <section className="section-register">
         <h2>Hola, bienvenido</h2>
-        <form onSubmit={handleSubmit}>
+        <form className="form-register" onSubmit={handleSubmit}>
           <div>
-            <label>Username:</label>
+            <label className="label-register">Username:</label>
             <input
-              type="text"
+              type="text" className="input-register"
               onChange={(e) => setUsername(e.target.value)}
               value={username}
             />
           </div>
           <div>
-            <label>Correo electrónico:</label>
-            <input
+            <label className="label-register">Correo electrónico:</label>
+            <input className="input-register"
               type="email"
               onChange={(e) => setEmail(e.target.value)}
               value={email}
             />
           </div>
           <div>
-            <label>Contraseña:</label>
-            <input
+            <label className="label-register">Contraseña:</label>
+            <input className="input-register"
               type="password"
               onChange={(e) => setPassword(e.target.value)}
               value={password}
             />
           </div>
-          <button>Ingresar</button>
+          <button className="btn-register">Registrarme</button>
         </form>
 
         {

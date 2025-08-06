@@ -1,0 +1,44 @@
+/* seccion principal */
+.section-register {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* form de registro */
+.form-register {
+  display: inline-block;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* label */
+.label-register {
+  font-size: 18px;
+  font-family: "aleo";
+}
+
+.input-register {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.btn-register {
+  font-size: 20px;
+  margin: 10px;
+  padding: 7px;
+  border-radius: 4px;
+  font-family: "aleo";
+  background-color: rgb(61, 109, 185);
+  color: white;
+}
