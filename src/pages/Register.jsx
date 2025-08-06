@@ -77,4 +77,5 @@ const Register = () => {
     </Layout>
   )
 }
+
 export { Register }

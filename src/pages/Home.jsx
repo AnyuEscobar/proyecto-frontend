@@ -12,6 +12,7 @@ const Home = () => {
   const [categoryEdit, setCategoryEdit] = useState("")
   const [imageEdit, setImageEdit] = useState("")
   const [search, setSearch] = useState('')
+  //estos son los estados que voy a usar en el buscador
   const [results, setResults] = useState([])
 
   const { user } = useAuth()

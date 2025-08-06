@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { Layout } from "../components/Layout"
 import { useAuth } from "../context/UserContext"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 const Login = () => {
   const [username, setUsername] = useState("")
@@ -26,25 +26,28 @@ const Login = () => {
     <Layout>
       <h1>Inicia sesión</h1>
 
-      <section>
-        <h2>Hola, bienvenido de nuevo</h2>
-        <p>johnd, m38rmF$</p>
-        <form onSubmit={handleLogin}>
+      <section className="section-login">
+        <h2>Hola! <br />
+          Bienvenido de nuevo</h2>
+        <form className="form-login" onSubmit={handleLogin}>
           <div>
-            <label>Nombre de usuario:</label>
-            <input
+            <label className="label-login">Nombre de usuario:</label>
+            <input className="login-input"
               type="text"
               onChange={(e) => setUsername(e.target.value)}
               value={username} />
           </div>
           <div>
-            <label>Contraseña:</label>
+            <label className="label-login">Contraseña:</label>
             <input
-              type="password"
+              type="password" className="login-input"
               onChange={(e) => setPassword(e.target.value)}
               value={password} />
           </div>
-          <button>Ingresar</button>
+          <button className="btn-login">Ingresar</button>
+          <p>¿No tienes una cuenta? <Link to="/register" >Registrate</Link></p>
+          <br />
+          <p>Usuario autorizado: <br />johnd, m38rmF$</p>
         </form>
       </section>
     </Layout>
