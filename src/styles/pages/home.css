@@ -18,6 +18,16 @@ section h1 {
   text-align: center;
 }
 
+.features-list {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 /* Subtítulos */
 section h2 {
   font-size: 2rem;
@@ -46,8 +56,8 @@ section p {
 /* Lista de beneficios */
 section ul {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
   padding: 0;
   list-style: none;
@@ -96,13 +106,13 @@ section ul li {
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 24px;
   margin-top: 20px;
-  background-color: #F5F5F5;
+  /* background-color: #F5F5F5; */
 
 }
 
 /* acá van los estilos del grid de productos */
 .products {
-  border: 1px solid #e2e8f0;
+  border: 1px solid #9aacc4;
   border-radius: 12px;
   padding: 16px;
   background-color: #ffffff;
@@ -120,8 +130,9 @@ section ul li {
 }
 
 .p-title {
-  font-size: 18px;
+  font-size: 15px;
   color: #2D3748;
+  font-family: "aleo";
 
 }
 
@@ -134,9 +145,39 @@ section ul li {
 .p-price {
   font-size: 20px;
   font-weight: bold;
-  color: rgb(57, 57, 75)
+  color: rgb(94, 155, 247)
 }
 
 .p-category {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: Arial,
+    Helvetica,
+    sans-serif;
+  font-size: 15px;
+}
+
+/* barra de búsqueda */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-input {
+  width: 250px;
+  padding: 10px 15px;
+  border: 2px solid rgb(86, 105, 147);
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+.search-input:focus {
+  border-color: #ff8ac0;
+  box-shadow: 0 0 8px rgba(231, 126, 173, 0.6);
 }

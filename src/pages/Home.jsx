@@ -104,29 +104,38 @@ const Home = () => {
         <h1>Bienvenido a Nuestra Tienda</h1>
         <p>Descubrí una selección exclusiva de productos para vos. Calidad, confianza y atención personalizada.</p>
       </section>
-
-      <section>
-        <h2>¿Por qué elegirnos?</h2>
+      <h2>¿Por qué elegirnos?</h2>
+      <section className="features-list" >
         <ul>
           <li className="p-card">
             <h3>Envíos a todo el país</h3>
             <p>Recibí tu compra en la puerta de tu casa estés donde estés.</p>
+            {/* icon de boxicon */}
+            <i className='bx bx-package' style={{ color: "#e77ead", fontSize: "2rem" }}></i>
           </li>
           <li className="p-card">
-            <h3>Pagos seguros</h3>
+            <h3>Pagos seguros </h3>
             <p>Trabajamos con plataformas que garantizan tu seguridad.</p>
+            {/* icon de boxicon */}
+            <i className='bx bx-wallet' style={{ color: "#e77ead", fontSize: "2rem" }}></i>
           </li>
           <li className="p-card">
             <h3>Atención personalizada</h3>
             <p>Estamos disponibles para ayudarte en todo momento.</p>
+            {/* icon de boxicon */}
+            <i
+              className='bx bx-happy-beaming'
+              style={{ color: '#e77ead', fontSize: '2rem' }}
+            ></i>
           </li>
         </ul>
       </section>
 
       <section>
         <h2>Nuestros productos</h2>
-        <input type="text" placeholder="Buscar..." onChange={handleChange} />
-
+        <div className="search-container">
+          <input className="search-input" type="text" placeholder="Buscar..." onChange={handleChange} />
+        </div>
         {
           showPopup && (
             <section className="popup-edit">
