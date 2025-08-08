@@ -181,3 +181,16 @@ section ul li {
   border-color: #ff8ac0;
   box-shadow: 0 0 8px rgba(231, 126, 173, 0.6);
 }
+
+/* media query */
+
+@media (max-width: 768px) {
+  .features-list ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .p-card {
+    max-width: 90%;
+  }
+}
