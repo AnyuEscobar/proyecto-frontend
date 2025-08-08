@@ -1,0 +1,21 @@
+.about-us {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+
+
+}
+
+.card-aboutus {
+  border: rgb(119, 119, 173);
+  margin: 20px;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: -3px 1px 5px 8px rgba(187, 190, 227, 0.39);
+  -webkit-box-shadow: -3px 1px 5px 8px rgba(187, 190, 227, 0.39);
+  -moz-box-shadow: -3px 1px 5px 8px rgba(187, 190, 227, 0.39);
+}
+
+.card-aboutus p {
+  font-size: 15px;
+
+}

@@ -7,6 +7,7 @@ import "./styles/pages/header.css"
 import "./styles/pages/login.css"
 import "./styles/pages/register.css"
 import "./styles/components/footer.css"
+import "./styles/pages/about-us.css"
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

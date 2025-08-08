@@ -198,7 +198,7 @@ const Home = () => {
                 </div>
               ))
             ) : (
-              search.trim() !== '' && <p>No se encontraron productos que coincidan con la búsqueda.</p>
+              search.trim() !== '' && <p className="p-error">No se encontraron productos que coincidan con la búsqueda.</p>
             )
           }
         </div>
