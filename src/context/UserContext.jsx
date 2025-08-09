@@ -25,21 +25,33 @@ const UserProvider = (props) => {
     }
   }
 
-  const register = async (id, username, email, password) => {
-    const response = await fetch("https://fakestoreapi.com/users", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify({ id, username, email, password })
-    })
+  // petición del register al backend
+  const register = async (username, email, password) => {
+    try {
+      const response = await fetch("https://fakestoreapi.com/users", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email, username, password })
+      })
 
-    console.log(register)
+      if (!response.ok) throw new Error("Error en el registro")
 
+      const data = await response.json()
+      console.log("Usuario creado:", data)
+
+      // Simula login
+      setUser(true)
+      return data
+    } catch (error) {
+      console.error(error)
+      throw error
+    }
   }
+
   const logout = () => {
     setUser(null)
   }
+
 
   return (
     <UserContext.Provider value={{ login, register, logout, user }}>

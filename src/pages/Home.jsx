@@ -142,41 +142,43 @@ const Home = () => {
               <h2>Editando producto.</h2>
               <button onClick={() => setShowPopup(null)}>Cerrar</button>
               <form onSubmit={handleUpdate}>
-                <input
+                <input className="input-edit"
                   type="text"
                   placeholder="Ingrese el titulo"
                   value={titleEdit}
                   onChange={(e) => setTitleEdit(e.target.value)}
                 />
                 <input
-                  type="number"
+                  type="number" className="input-edit"
                   placeholder="Ingrese el precio"
                   value={priceEdit}
                   onChange={(e) => setPriceEdit(e.target.value)}
                 />
-                <textarea
+                <textarea className="textarea-edit"
                   placeholder="Ingrese la descripción"
                   value={descriptionEdit}
                   onChange={(e) => setDescriptionEdit(e.target.value)}
                 ></textarea>
                 <input
-                  type="text"
+                  type="text" className="input-edit"
                   placeholder="Ingrese la categoria"
                   value={categoryEdit}
                   onChange={(e) => setCategoryEdit(e.target.value)}
                 />
                 <input
-                  type="text"
+                  type="text" className="input-edit"
                   placeholder="Ingrese la URL de la imagen"
                   value={imageEdit}
                   onChange={(e) => setImageEdit(e.target.value)}
                 />
                 <button>Actualizar</button>
+
               </form>
             </section>
           )
         }
 
+        {/* este es mi grid de productos con su map */}
         <div id="products-grid">
           {
             productosVisibles.length > 0 ? (
@@ -190,8 +192,8 @@ const Home = () => {
                   {
                     user && (
                       <div>
-                        <button onClick={() => handleOpenEdit(product)}>Actualizar</button>
-                        <button onClick={() => handleDelete(product.id)}>Borrar</button>
+                        <button className="btn-update" onClick={() => handleOpenEdit(product)}>Actualizar</button>
+                        <button className="btn-update" onClick={() => handleDelete(product.id)}>Borrar</button>
                       </div>
                     )
                   }

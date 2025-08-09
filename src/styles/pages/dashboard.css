@@ -1,0 +1,20 @@
+.form-dashboard {
+  border: rgb(71, 71, 176);
+  display: block;
+  padding: 20px;
+  margin: 100px;
+}
+
+.label-dashboard {
+  font-family: "aleo";
+  font-size: 16px;
+  display: flex;
+}
+
+.btn-dashboard {
+  background-color: rgb(175, 163, 210);
+  color: rgb(255, 255, 255);
+  border-radius: 7px;
+  padding: 5px;
+
+}

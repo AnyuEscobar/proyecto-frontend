@@ -9,6 +9,10 @@ const Register = () => {
   const [error, setError] = useState("")
   const [success, setSuccess] = useState("")
 
+
+  // usercontext
+
+  const { register } = useAuth()
   const handleSubmit = (e) => {
     e.preventDefault()
     setError("")

@@ -153,6 +153,7 @@ section ul li {
     Helvetica,
     sans-serif;
   font-size: 15px;
+  color: rgb(238, 188, 130);
 }
 
 /* barra de búsqueda */
@@ -198,4 +199,102 @@ section ul li {
 .p-error {
   font-size: 20px;
   height: 50px;
+}
+
+/* boton una vez registrado el login */
+
+.btn-update {
+  padding: 8px;
+  background-color: rgb(94, 155, 247);
+  border-radius: 5px;
+  margin: 5px;
+  color: white;
+  border: none;
+}
+
+/* tarjeta de editar el producto */
+
+.popup-edit {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 450px;
+  max-height: 100vh;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  font-family: Arial, sans-serif;
+
+}
+
+/* Fondo detrás del popup */
+.popup-edit::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(230, 232, 238, 0.5);
+  z-index: -1;
+}
+
+/* Título */
+.popup-edit h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Botón cerrar */
+.popup-edit>button {
+  background: #e22525;
+  color: white;
+  padding: 0.7rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  padding: 6px;
+  border-radius: 3px;
+}
+
+
+/* input del form de editar */
+.input-edit {
+  padding: 5px;
+  margin: 10px;
+  border-radius: 2px;
+  font-size: 14px;
+}
+
+.textarea-edit {
+  padding: 5px;
+  margin: 10px;
+  height: 35vh;
+  width: 100%;
+  border-radius: 2px;
+  font-size: 14px;
+
+}
+
+/* Botón actualizar */
+.popup-edit form button {
+  background: #007BFF;
+  color: white;
+  padding: 9px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+
+}
+
+/* efecto hover */
+.popup-edit form button:hover {
+  background: #0056b3;
 }

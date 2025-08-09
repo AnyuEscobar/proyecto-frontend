@@ -53,27 +53,27 @@ const Dashboard = () => {
 
       <section>
         <h2>Cargar nuevo producto</h2>
-        <form onSubmit={handleSubmit}>
+        <form className="form-dashboard" onSubmit={handleSubmit}>
           <div>
-            <label>Nombre del producto:</label>
-            <input type="text" name="nombre" onChange={(e) => setName(e.target.value)} value={name} />
+            <label className="label-dashboard">Nombre del producto:</label>
+            <input className="input-dashboard" type="text" name="nombre" onChange={(e) => setName(e.target.value)} value={name} />
           </div>
 
           <div>
-            <label>Precio:</label>
-            <input type="number" name="precio" onChange={(e) => setPrice(e.target.value)} value={price} />
+            <label className="label-dashboard">Precio:</label>
+            <input className="input-dashboard" type="number" name="precio" onChange={(e) => setPrice(e.target.value)} value={price} />
           </div>
 
           <div>
-            <label>Descripción:</label>
-            <textarea name="descripcion" rows="4" onChange={(e) => setDescription(e.target.value)} value={description} />
+            <label className="label-dashboard">Descripción:</label>
+            <textarea className="input-dashboard" name="descripcion" rows="4" onChange={(e) => setDescription(e.target.value)} value={description} />
           </div>
 
           {
             error && <p className="error">{error}</p>
           }
 
-          <button>Guardar producto</button>
+          <button className="btn-dashboard">Guardar producto</button>
         </form>
 
         {
