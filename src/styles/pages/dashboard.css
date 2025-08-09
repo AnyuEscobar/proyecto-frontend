@@ -1,16 +1,16 @@
 .form-dashboard {
-  /* position: fixed;
+  position: fixed;
   top: 50%;
-  left: 50%; */
+  left: 50%;
   transform: translate(-50%, -50%);
   background: white;
   padding: 2rem;
   border-radius: 10px;
   width: 450px;
-  max-height: 100vh;
+  max-height: 500vh;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   font-family: Arial, sans-serif;
-
+  margin: 5px
 }
 
 .label-dashboard {
@@ -20,9 +20,11 @@
 }
 
 .btn-dashboard {
-  background-color: rgb(175, 163, 210);
+  background-color: rgb(53, 127, 218);
   color: rgb(255, 255, 255);
   border-radius: 7px;
-  padding: 5px;
+  padding: 8px;
+  border: none;
+  font-size: 15px;
 
 }

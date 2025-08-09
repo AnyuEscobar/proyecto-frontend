@@ -52,8 +52,9 @@ const Dashboard = () => {
       <h1>Panel de Administración</h1>
 
       <section>
-        <h2>Cargar nuevo producto</h2>
+
         <form className="form-dashboard" onSubmit={handleSubmit}>
+          <h2>Cargar nuevo producto</h2>
           <div>
             <label className="label-dashboard">Nombre del producto:</label>
             <input className="input-dashboard" type="text" name="nombre" onChange={(e) => setName(e.target.value)} value={name} />
