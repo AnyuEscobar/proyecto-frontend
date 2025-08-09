@@ -1,6 +1,7 @@
 import { Layout } from "../components/Layout"
 
 
+
 const AboutUs = () => {
   return (
     <Layout>
@@ -8,8 +9,9 @@ const AboutUs = () => {
         <section className="about-us">
           <section className="card-aboutus">
             <h2>¿De qué trata este proyecto?</h2>
-            {/* <i className='bx  bx-message-circle-question-mark' style={{ color: '#e77ead', fontSize: '2rem' }}></i> */}
+
             <p> Este es un proyecto de e-commerce desarrollado como parte del curso de Frontend. Se trata de una tienda online completa que simula una experiencia real de compra con funcionalidades de autenticación y gestión de productos. El proyecto demuestra las mejores prácticas de desarrollo frontend, incluyendo gestión de estado, routing, formularios validados y diseño responsive.</p>
+
 
           </section>
           <section className="card-aboutus">
