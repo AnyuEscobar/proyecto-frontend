@@ -49,42 +49,44 @@ const Dashboard = () => {
 
   return (
     <Layout>
-      <h1>Panel de Administración</h1>
+      <main>
+        <h1>Panel de Administración</h1>
 
-      <section>
+        <section className="section-dashboard">
 
-        <form className="form-dashboard" onSubmit={handleSubmit}>
-          <h2>Cargar nuevo producto</h2>
-          <div>
-            <label className="label-dashboard">Nombre del producto:</label>
-            <input className="input-dashboard" type="text" name="nombre" onChange={(e) => setName(e.target.value)} value={name} />
-          </div>
+          <form className="form-dashboard" onSubmit={handleSubmit}>
+            <h2>Cargar nuevo producto</h2>
+            <div>
+              <label className="label-dashboard">Nombre del producto:</label>
+              <input className="input-dashboard" type="text" name="nombre" onChange={(e) => setName(e.target.value)} value={name} />
+            </div>
 
-          <div>
-            <label className="label-dashboard">Precio:</label>
-            <input className="input-dashboard" type="number" name="precio" onChange={(e) => setPrice(e.target.value)} value={price} />
-          </div>
+            <div>
+              <label className="label-dashboard">Precio:</label>
+              <input className="input-dashboard" type="number" name="precio" onChange={(e) => setPrice(e.target.value)} value={price} />
+            </div>
 
-          <div>
-            <label className="label-dashboard">Descripción:</label>
-            <textarea className="input-dashboard" name="descripcion" rows="4" onChange={(e) => setDescription(e.target.value)} value={description} />
-          </div>
+            <div>
+              <label className="label-dashboard">Descripción:</label>
+              <textarea className="input-dashboard" name="descripcion" rows="4" onChange={(e) => setDescription(e.target.value)} value={description} />
+            </div>
+
+            {
+              error && <p className="error">{error}</p>
+            }
+
+            <button className="btn-dashboard">Guardar producto</button>
+          </form>
 
           {
-            error && <p className="error">{error}</p>
+            product && <div>
+              <h3>{product.title}</h3>
+              <p>${product.price}</p>
+              <p>{product.description}</p>
+            </div>
           }
-
-          <button className="btn-dashboard">Guardar producto</button>
-        </form>
-
-        {
-          product && <div>
-            <h3>{product.title}</h3>
-            <p>${product.price}</p>
-            <p>{product.description}</p>
-          </div>
-        }
-      </section>
+        </section>
+      </main>
     </Layout>
   )
 }

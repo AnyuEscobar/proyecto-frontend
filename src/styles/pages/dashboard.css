@@ -1,16 +1,23 @@
+.section-dashboard {
+  max-width: 400px;
+  margin: 60px auto;
+  padding: 40px;
+
+}
+
 .form-dashboard {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+  display: inline-block;
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  margin-top: 10px;
   background: white;
   padding: 2rem;
   border-radius: 10px;
-  width: 450px;
-  max-height: 500vh;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   font-family: Arial, sans-serif;
-  margin: 5px
 }
 
 .label-dashboard {
