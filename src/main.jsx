@@ -9,6 +9,7 @@ import "./styles/pages/register.css"
 import "./styles/components/footer.css"
 import "./styles/pages/about-us.css"
 import "./styles/pages/dashboard.css"
+import "./styles/components/layout.css"
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
