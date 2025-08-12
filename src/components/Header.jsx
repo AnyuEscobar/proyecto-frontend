@@ -17,7 +17,10 @@ const Header = () => {
             {
               user && <>
                 <li><Link to="/">Inicio</Link></li>
+                <li><Link to="/about-us">Sobre Nosotros</Link></li>
                 <li><Link to="/dashboard">Dashboard</Link></li>
+
+
                 <button onClick={handleLogout}>Cerrar sesión</button>
               </>
             }

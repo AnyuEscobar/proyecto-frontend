@@ -13,8 +13,9 @@ const Register = () => {
   // usercontext
 
   const { register } = useAuth()
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    register(username, email, password)
     setError("")
     setSuccess("")
 
@@ -23,13 +24,24 @@ const Register = () => {
       return
     }
 
-    const newUser = {
-      username,
-      email,
-      password
+    // const newUser = {
+    //   username,
+    //   email,
+    //   password
+    // }
+    //declaracion de register traído del userContext
+    register()
+    const isRegister = await register(username, email, password)
+    console.log(username, email, password)
+
+    if (isRegister) {
+      setUsername("")
+      setPassword("")
+      setEmail("")
     }
 
-    console.log(newUser)
+
+
     setSuccess("Usuario registrado con éxito")
 
     setUsername("")

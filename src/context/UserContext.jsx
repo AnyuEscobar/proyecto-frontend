@@ -41,7 +41,7 @@ const UserProvider = (props) => {
 
       // Simula login
       setUser(true)
-      return data
+      return true
     } catch (error) {
       console.error(error)
       throw error

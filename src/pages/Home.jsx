@@ -102,8 +102,8 @@ const Home = () => {
     <Layout>
       <main>
         <section>
-          <h1>Bienvenido a Nuestra Tienda</h1>
-          <p>Descubrí una selección exclusiva de productos para vos. Calidad, confianza y atención personalizada.</p>
+          <h1 className="h1-home">Bienvenido a Nuestra Tienda</h1>
+          <p className="p-home">Descubrí una selección exclusiva de productos para vos. <br /> Calidad, confianza y atención personalizada.</p>
         </section>
         <h2>¿Por qué elegirnos?</h2>
         <section className="features-list" >
